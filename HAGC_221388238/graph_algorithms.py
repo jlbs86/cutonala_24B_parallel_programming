@@ -1,6 +1,7 @@
 class Algorithms:
     def __init__(self, graph):
-        self.graph = graph 
+        self.graph = graph
+        self.visited = False
     
     def bfs(self, start_node):
         print("*** BFS ***")
@@ -8,6 +9,7 @@ class Algorithms:
         if start_node not in self.graph:
             print("Node not found in graph")
             return -1
+            
         # Create a list to store the visited nodes
         visited_nodes = []
         # Create a queue to store the nodes to be visited
@@ -26,6 +28,10 @@ class Algorithms:
 
     def dfs(self, start_node):
         print("*** DFS ***")
+        if start_node not in self.graph:
+            print("Node not found in graph")
+            return -1
+        
         # Check if the start node is in the graph
         stack = [start_node]
         # Create a list to store the visited nodes
@@ -61,6 +67,6 @@ if __name__ == '__main__':
     
     result_bfs = my_instance.bfs('D');
     print("BFS algorithm path: ", result_bfs)
-    print()
+
     result_dfs = my_instance.dfs('D');
     print("DFS algorithm path: ", result_dfs)
