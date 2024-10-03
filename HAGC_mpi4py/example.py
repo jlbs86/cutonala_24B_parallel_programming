@@ -1,7 +1,9 @@
 '''
-  This is the code used in Google Collab, which is stored in the sample_data folder.
+  This is the code used in Google Collab, which is stored in the sample_data folder. Please copy the file in 
+  case it is deleted from that folder.
   I attach the requirements.txt file for you to get the libraries used in case you run in another environment.
 '''
+
 from mpi4py import MPI
 import numpy as np
 
